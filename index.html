@@ -1,0 +1,139 @@
+<html>
+    <style>
+        span.b {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        padding: 1px;
+        border: 1px solid rgb(28, 32, 32);    
+        background-color: rgb(149, 188, 229);
+        text-align: center;
+        
+        }
+
+body {
+  color: rgb(124, 124, 124);
+  text-align: center;
+  font-family: myFirstFont;
+  width: 100%;
+  
+}
+
+h1 {
+  padding-top: 50px;
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 0px;
+}
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+body {
+  background-color: rgb(28, 32, 32);
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(mont.woff);
+}
+
+form {
+  color: rgb(160, 180, 207);
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+#game {
+  background: rgb(91, 99, 109);
+  width: 50%;
+  padding-top: 40px;
+  border-radius: 15px;
+  margin-left: 380px;
+  margin-right: 300px;
+  position: absolute;
+  align-items: center;
+}
+
+#instructions {
+  background: rgb(59, 66, 74);
+  padding-top: 10px;
+  border-radius: 15px;
+  margin-left: 15px;
+  margin-right: 1190px;
+  margin-top: 90px;
+  font-size: 12px;
+  display: ;
+  float: left;
+  position: absolute;
+  
+}
+    </style>
+
+    <h1>Cipher</h1>
+<div id="game">
+    <h2>"The Caesar Game"</h2
+    <p id="one"><span class ="b">W1</span><span class ="b">W1</span><span class ="b">W1</span><span class ="b">W1</span><span class ="b">W1</span></p><form id = "guess">
+      <label for="guess">?</label>
+      <input type="number" id="guess">
+      <input type="submit" id="submitGuess" value="Done">
+   
+    <br></br>
+    <p id="two"><span class ="b">W2</span><span class ="b">W2</span><span class ="b">W2</span><span class ="b">W2</span><span class ="b">W2</span></p><form id = "guess">
+      <label for="guess">?</label>
+      <input type="number" id="guess">
+      <input type="submit" id="submitGuess" value="Done">
+   
+    <br></br>
+    <p id="three"><span class ="b">W3</span><span class ="b">W3</span><span class ="b">W3</span><span class ="b">W3</span><span class ="b">W3</span></p><form id = "guess">
+      <label for="guess">?</label>
+      <input type="number" id="guess">
+      <input type="submit" id="submitGuess" value="Done">
+    </form>
+    <br></br>
+    
+  </div>
+    
+<div id="instructions">
+    <h2>How To Play</h2>
+    <p>
+      You are given three words each day, all encrypted using the <b>Caesar Cipher from 1-10</b>.<br></br>
+      The <b>Caesar Cipher</b> encrypts a letter by a certain amount: 'A' with a cipher of three becomes 'D' for example.<br></br> Your job is to <b>decrypt</b> each word, meaning:
+      Figure out the cipher for each word, and subtract that amount from each letter. <br></br>You are given three guesses per word, <b>the closer the guess, the more blue the word becomes.
+        <br></br>Good luck!
+      </p>
+</div>
+    <script id = encryption>
+      FileReader.readAsText(words.txt)
+      alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      result = ""
+      key = gettRandomInt(1, 10)
+      word = textfile hereeeee
+      for letter in word:
+        letter = letter.upper()
+        index = (alpha.find(letter) + key) % 26
+        result = result + alpha[index]
+        if (result != ""){
+       document.getElementById("result").textContent = `${result}`;
+   }
+      function decryption(){
+        var guesser = 0
+        var x = document.getElementById("guess").value;
+        if x == key{
+          # change the colors and do a scroll animation for the word;
+        } else if x > key{
+          change the color lighter;
+          guesser++;
+        } else if x < key{
+          change the color darker;
+          guesser++;
+        }
+      }
+    </script>
+
+  <!-- there has to be a way for the user to figure it out, like you need to have a chance to actually get a hint....-->
+    <!-- have a thanks and copyright stuff at the bottom of the page, including to stanford for the word list: https://www-cs-faculty.stanford.edu/~knuth/sgb-words.txt-->
+</html>
