@@ -6,5 +6,5 @@ Your job is to decrypt the words, with only three tries on each word!
 
 Currently this idea is still in the process of being planned out, so the UI is complete but the back end is just beginning. :)
 
-#Current UI Design:
-(https://github.com/nataliakusmirek/Cipher/blob/main/screenshot.JPG)
+# Current UI Design:
+!(https://github.com/nataliakusmirek/Cipher/blob/main/screenshot.JPG)
